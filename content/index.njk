@@ -5,9 +5,21 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
+
+<h1>Hey, I&rsquo;m Josh!</h1>
+
+<p>Welcome to my digital garden. 🌱</p>
+<p>It's quite bare as I'm setting things up, but check back regularly for new content.</p>
+<p>In the meantime, you can check out the previous iterations of my personal site:</p>
+<ul>
+	<li><a href="https://joshjavier.github.io/old-jekyll-blog/">Old Jekyll blog</a> - Probably my first (not very successful) attempt at "blogging like a hacker."</li>
+	<li><a href="https://joshjavier.github.io/">Personal site v2.0</a> - I built this as a portfolio when I went job hunting in 2023.</li>
+</ul>
+<p>See you around!</p>
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
