@@ -1,6 +1,7 @@
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: Figtree, Avenir, Montserrat, 'URW Gothic', source-sans-pro, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -18,21 +19,6 @@
 	--text-color-link-visited: #17050F;
 
 	--syntax-tab-size: 2;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
 }
 
 
