@@ -5,14 +5,6 @@ date: 2024-07-07
 tags: weeknotes
 ---
 
-{%- css %}
-img {
-	max-width: 100%;
-	display: block;
-	height: auto;
-}
-{% endcss %}
-
 {% image "./smoking-area.jpg", "Smoking shed supported by brick columns covered with vines, with cigarette and trash receptacles at the center." %}
 
 This is week one, not only because it's the first week of July, but also because it's the first weeknote I ever published.

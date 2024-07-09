@@ -21,19 +21,21 @@ function isFullUrl(url) {
 export default function (eleventyConfig) {
 	// Eleventy Image shortcode
 	// https://www.11ty.dev/docs/plugins/image/
-	eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, widths, sizes) {
+	eleventyConfig.addAsyncShortcode("image", async function imageShortcode(
+		src,
+		alt,
+		widths = [400, 800, 1280],
+		sizes = "(min-width: 640px) 800px, 100vw"
+	) {
 		// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
 		// Warning: Avif can be resource-intensive so take care!
 		let formats = ["avif", "webp", "auto"];
-		let input;
-		if(isFullUrl(src)) {
-			input = src;
-		} else {
-			input = relativeToInputPath(this.page.inputPath, src);
-		}
+		let input = isFullUrl(src)
+			? src
+			: relativeToInputPath(this.page.inputPath, src);
 
 		let metadata = await eleventyImage(input, {
-			widths: widths || ["auto"],
+			widths,
 			formats,
 			outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
 		});

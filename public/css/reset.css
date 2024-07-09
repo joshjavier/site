@@ -55,6 +55,11 @@ picture {
 	display: block;
 }
 
+/* Preserve aspect ratio of images with [width][height] attributes */
+img[width][height] {
+	height: auto;
+}
+
 /* Inherit fonts for inputs and buttons */
 input, button,
 textarea, select {
