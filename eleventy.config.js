@@ -8,6 +8,7 @@ import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
 
 import pluginDrafts from './eleventy.config.drafts.js';
 import pluginImages from './eleventy.config.images.js';
+import pluginFavicon from './eleventy.config.favicon.js';
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function (eleventyConfig) {
@@ -27,6 +28,7 @@ export default function (eleventyConfig) {
 	// App plugins
 	eleventyConfig.addPlugin(pluginDrafts);
 	eleventyConfig.addPlugin(pluginImages);
+	eleventyConfig.addPlugin(pluginFavicon);
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
